@@ -1,0 +1,31 @@
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    background-color: $colour-grey;
+    box-shadow: inset 0px 4px 4px #CFCFCF;
+
+    .container {
+        display: flex;
+        gap: 10px;
+        &__icon {
+            font-size: 16px;
+        }
+
+        &__input {
+            border: none;
+            text-align: center;
+            width: 70%;
+            font-size: 16px;
+            color: black;
+            background-color: $colour-grey;
+        }
+        &__input:focus{
+            outline: none;
+        }
+        &__input:focus::placeholder{
+            color: transparent;
+        }
+    }
+}

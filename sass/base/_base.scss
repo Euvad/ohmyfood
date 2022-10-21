@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.world {
+    opacity: 1;
+    animation: load 1s linear;
+}
+
+.loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    opacity: 0;
+    border-top: 16px solid $colour-secondary;
+    animation: spin 1s ease;
+}
+
+.loader__logo {
+    position: absolute;
+    width: 70px;
+    top: -14px;
+    left: 10px;
+    transform: rotate(-8deg);
+    height: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1.2);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(360deg) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(540deg) scale(0);
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1; 
+    }
+}

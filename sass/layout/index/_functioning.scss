@@ -1,0 +1,55 @@
+
+
+
+.functioning{
+    font-family: 'Roboto', sans-serif;
+    h1{
+        font-size: 25px;
+        width: 100%;
+        padding: 0px 0px 0px 20px;
+        margin: 50px 0px 20px 0px;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+        .filter {
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 5px 10px 0px #b4b4b4;
+            border-radius: 20px;
+            height: 75px;
+            margin: 0px 20px 0px 20px;
+            width: 100%;
+            max-width: 320px;
+            background-color: $colour-explorer;
+            transition: all 0.5s ease;
+            &__number {
+                position: relative;
+                right: 10px;
+                color: white;
+                background-color: $colour-primary;
+                border: none;
+                border-radius: 50%;
+                width: 23px;
+                height: 23px;
+                font-size: 15px;
+                padding: 3px;
+                text-align: center;
+            }
+            &__icon {
+                color: grey;
+                font-size: 20px;
+                transition: all 1s ease;
+                margin: 0px 25px 0px 15px;
+            }
+        }
+    }
+    .filter:hover{
+        background-color: #F5EDFF;
+    }
+    .filter:hover > .filter__icon{
+        color: $colour-primary;
+    } 
+}

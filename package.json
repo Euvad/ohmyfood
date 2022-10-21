@@ -1,0 +1,31 @@
+{
+  "name": "p3_ocr",
+  "version": "1.0.0",
+  "description": "Third project of openclassroom web developper course.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "autoprefixer": "postcss public/css/*.css --use autoprefixer -d public/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloVad/ocr_webdev_p3.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass"
+  ],
+  "author": "VAD",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/HelloVad/ocr_webdev_p3/issues"
+  },
+  "homepage": "https://github.com/HelloVad/ocr_webdev_p3#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0"
+  }
+}

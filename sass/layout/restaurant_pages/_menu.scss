@@ -1,0 +1,204 @@
+.menu {
+    position: relative;
+    bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: $colour-explorer;
+    border-radius: 40px 40px 0 0;
+    margin: 0px 0px -50px 0px;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px 20px 20px;
+
+        &__title {
+            font-size: 25px;
+            font-family: 'Shrikhand';
+            font-size: 22px;
+        }
+
+        &__icon {
+            font-size: 25px;
+        }
+
+        &__content {
+            font-size: 25px;
+            display: flex;
+
+            &__icon1 {
+                color: black;
+                position: absolute;
+                transition: all 0.5s ease;
+            }
+
+            &__icon2 {
+                color: transparent;
+                background: linear-gradient(to right, $colour-secondary 5%, $colour-primary 100%);
+                opacity: 0;
+                background-clip: text;
+                pointer-events: none;
+                transition: opacity 0.5s ease;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__maintitle {
+            margin: 0px 0px 0px 20px;
+            text-transform: uppercase;
+            align-self: flex-start;
+            position: relative;
+            padding: 0 0 10px 0;
+            font-weight: normal;
+
+            &::after {
+                content: "";
+                width: 45px;
+                height: 4px;
+                background-color: $colour-tertiary;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        &__dishes {
+            display: flex;
+            align-items: flex-end;
+            align-items: center;
+            cursor: pointer;
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: 10px 0;
+            width: 93%;
+            height: 70px;
+            max-width: 100%;
+            box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
+            animation: itemAppear 1s;
+            animation-timing-function: ease;
+            animation-fill-mode: both;
+            transform: scale(0);
+
+            &__name {
+                margin: 0px auto 0px 0px;
+                padding: 20px;
+                width: 85%;
+                white-space: nowrap;
+                overflow: hidden;
+
+                &--title {
+                    padding: 0px 0px 5px 0px;
+                    font-size: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                &--subtitle {
+                    font-size: 16px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &__price {
+                font-weight: 700;
+                display: flex;
+                width: 40px;
+                align-items: flex-end;
+                justify-content: center;
+                margin: 20px -50px 0px 0px;
+                transition: all 0.5s cubic-bezier(.91,.8,.54,1.39);
+            }
+
+            &__tickbox {
+                background-color: $colour-tertiary;
+                height: 100%;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translateX(60px);
+                transition: all 0.5s cubic-bezier(.91,.8,.54,1.39);
+
+                &__add {
+                    background-color: #fff;
+                    border-radius: 100px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0px 10px 0px 0px;
+                    transform: rotate(180deg);
+                    transition: all 0.5s cubic-bezier(.91,.8,.54,1.39);
+
+                    &--icon {
+                        color: #99e2d0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px 0px 0px;
+
+        .explorer__button {
+            text-align: center;
+        }
+    }
+}
+
+//food selection hover
+.menu__container__dishes:hover>.menu__container__dishes__price {
+    margin: 20px 10px 0px 0px;
+
+}
+
+.menu__container__dishes:hover>.menu__container__dishes__tickbox {
+    transform: translateX(10px);
+}
+
+.menu__container__dishes:hover>.menu__container__dishes__tickbox>.menu__container__dishes__tickbox__add {
+    transform: rotate(0deg);
+}
+
+//heart hover
+
+.menu__head__content__icon1:hover {
+    color: transparent;
+    opacity: 0;
+}
+
+.menu__head__content__icon1:hover+.menu__head__content__icon2 {
+    opacity: 1;
+}
+
+@keyframes itemAppear {
+	0%{
+		opacity:0;
+		transform:translateY(50%);
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:1;
+		transform:translateY(0%);
+	}
+}
+
+
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+      animation-delay:  #{$i/10}s;
+    }
+  }

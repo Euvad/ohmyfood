@@ -1,0 +1,20 @@
+.explorer{
+    background-color: $colour-explorer;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    flex-direction: column;
+    &__title{
+        font-size: 25px;
+        font-weight: bold;
+        margin: 40px 0px 0px 0px;
+    }
+    &__subtitle{
+        font-size: 18px;
+        margin: 20px 0px 30px 0px;
+    }
+    &__button{
+        margin: 0px 0px 70px 0px;
+    }
+}

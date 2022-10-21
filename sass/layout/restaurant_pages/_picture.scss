@@ -1,0 +1,8 @@
+.picture{
+    height: 300px;
+    &__restaurant{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

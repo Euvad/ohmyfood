@@ -1,0 +1,22 @@
+//Online imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//Local imports
+@import "./utils/variables";
+
+@import "./base/normalize";
+@import "./base/base";
+
+@import "./components/button";
+
+@import "./layout/index/search";
+@import "./layout/index/explorer";
+@import "./layout/index/restaurants";
+@import "./layout/index/functioning";
+
+@import "./layout/restaurant_pages/picture";
+@import "./layout/restaurant_pages/menu";
+
+
+@import "./layout/footer";
+@import "./layout/header";
