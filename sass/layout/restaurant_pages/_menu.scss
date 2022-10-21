@@ -80,7 +80,7 @@
             height: 70px;
             max-width: 100%;
             box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
-            animation: itemAppear 1s;
+            animation: itemAppear 1.5s;
             animation-timing-function: ease;
             animation-fill-mode: both;
             transform: scale(0);
@@ -186,9 +186,6 @@
 	0%{
 		opacity:0;
 		transform:translateY(50%);
-	}
-	50%{
-		opacity:1;
 	}
 	100%{
 		opacity:1;
